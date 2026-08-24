@@ -238,7 +238,7 @@
     }));
     if (hl) series.push({ name: String(hl), type: "line", data: zip(c.doy, c.years[hl]), showSymbol: false, lineStyle: { color: t.s2, width: 2 }, itemStyle: { color: t.s2 }, z: 2, endLabel: { show: true, formatter: String(hl), color: t.ink2, fontSize: 12 }, _year: hl });
     series.push({ name: String(thisYear), type: "line", data: zip(c.doy.slice(0, doyToday), c.years[thisYear].slice(0, doyToday)), showSymbol: false, lineStyle: { color: t.s1, width: 2.5 }, itemStyle: { color: t.s1 }, z: 3,
-      endLabel: { show: true, formatter: (p) => thisYear + ": " + fmtInt(p.value[1]), color: t.ink, fontWeight: 600, fontSize: 12 }, _year: thisYear });
+      endLabel: { show: true, formatter: (p) => thisYear + ": " + fmtInt(p.value[1]), color: t.ink, fontWeight: 600, fontSize: 12, offset: doyToday < 40 ? [10, -14] : [0, 0] }, _year: thisYear });
     const ch = mk("chart-cumulative");
     ch.setOption({
       animation: false, backgroundColor: "transparent",
