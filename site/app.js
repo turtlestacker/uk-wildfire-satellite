@@ -68,7 +68,7 @@
     const tiles = [
       { label: "Active fire events, last 7 days", value: fmtInt(m.events_last7), delta: fmtInt(m.new_events_last7) + " new events · " + fmtInt(m.detections_last7) + " detections", spark: last90(d.active_events) },
       { label: "7-day average of active events", value: m.avg7_active_events.toFixed(1), delta: "per day, to " + fmtDate(D.meta.data_end), spark: last90(d.active_events_7d) },
-      { label: "Fire events started this year", value: fmtInt(ytd.ytd), delta: ytd.prior_mean != null ? (vsPrior >= 0 ? "+" : "") + vsPrior + "% vs " + ytd.prior_years.length + "-year average for the same period (" + ytd.prior_mean + ")" : "", cls: vsPrior > 0 ? "up" : "down", spark: null, text: ytd.rank ? "Rank " + ytd.rank + " of " + (ytd.prior_years.length + 1) + " years to date · record " + fmtInt(ytd.prior_max) + " (" + ytd.prior_max_year + ")" : "" },
+      { label: "Fire events started this year", value: fmtInt(ytd.ytd), delta: ytd.prior_mean != null ? (vsPrior >= 0 ? "+" : "") + vsPrior + "% vs " + ytd.prior_years.length + "-year average for the same period (" + fmtInt(Math.round(ytd.prior_mean)) + ")" : "", cls: vsPrior > 0 ? "up" : "down", spark: null, text: ytd.rank ? "Rank " + ytd.rank + " of " + (ytd.prior_years.length + 1) + " years to date · record " + fmtInt(ytd.prior_max) + " (" + ytd.prior_max_year + ")" : "" },
       { label: "Satellite detections this year", value: fmtInt(m.ytd_detections.ytd), delta: m.ytd_detections.prior_mean != null ? "Average for the same period " + fmtInt(Math.round(m.ytd_detections.prior_mean)) + " · record " + fmtInt(m.ytd_detections.prior_max) + " (" + m.ytd_detections.prior_max_year + ")" : "", spark: last90(d.detections), sparkColor: "--series-2" },
     ];
     const root = $("#kpis");
@@ -116,7 +116,7 @@
     const common = (title) => ({
       animation: false, backgroundColor: "transparent",
       grid: { left: 48, right: 16, top: 36, bottom: 30, containLabel: false },
-      xAxis: { type: "time", ...baseAxis(t), splitLine: { show: false }, min: start, max: end, axisLabel: { color: t.muted, fontSize: 12, hideOverlap: true } },
+      xAxis: { type: "time", ...baseAxis(t), splitLine: { show: false }, min: dates[0], max: end, axisLabel: { color: t.muted, fontSize: 12, hideOverlap: true } },
       yAxis: { type: "value", ...baseAxis(t), axisLine: { show: false }, minInterval: 1, axisLabel: { color: t.muted, fontSize: 12, formatter: (v) => fmtInt(v) } },
       tooltip: { trigger: "axis", axisPointer: { type: "line", lineStyle: { color: t.axis, width: 1 } }, ...tooltipStyle(t), formatter: title },
       legend: { top: 0, left: 0, icon: "rect", itemWidth: 12, itemHeight: 12, textStyle: { color: t.ink2, fontSize: 12 } },
@@ -152,8 +152,9 @@
     ev.on("datazoom", debounce(() => { renderDailyTable(); }, 200));
     renderDailyTable();
   }
+  function axisDate(v) { return (typeof v === "number" || v instanceof Date) ? isoDate(v) : String(v).slice(0, 10); }
   function tipEvents(params) {
-    const i = D.daily.dates.indexOf(params[0].axisValue instanceof Date ? isoDate(params[0].axisValue) : String(params[0].axisValue).slice(0, 10));
+    const i = D.daily.dates.indexOf(axisDate(params[0].axisValue));
     if (i < 0) return "";
     const d = D.daily, t = theme();
     return '<div style="margin-bottom:6px;color:var(--ink-2)">' + esc(fmtDate(d.dates[i])) + (d.product_status[i] === "NRT" ? " · near-real-time" : "") + "</div>" +
@@ -161,7 +162,7 @@
       row(null, "New events", fmtInt(d.new_events[i])) + row(null, "Detections", fmtInt(d.detections[i]));
   }
   function tipDetections(params, snppOnly) {
-    const i = D.daily.dates.indexOf(params[0].axisValue instanceof Date ? isoDate(params[0].axisValue) : String(params[0].axisValue).slice(0, 10));
+    const i = D.daily.dates.indexOf(axisDate(params[0].axisValue));
     if (i < 0) return "";
     const d = D.daily, t = theme();
     return '<div style="margin-bottom:6px;color:var(--ink-2)">' + esc(fmtDate(d.dates[i])) + "</div>" +
@@ -178,12 +179,14 @@
   }
   function debounce(fn, ms) { let h; return (...a) => { clearTimeout(h); h = setTimeout(() => fn(...a), ms); }; }
   function currentZoom() {
-    const opt = charts["chart-events"].getOption();
-    const dz = opt.dataZoom[0];
     const dates = D.daily.dates;
-    const s = dz.startValue != null ? isoDate(dz.startValue) : dates[0];
-    const e = dz.endValue != null ? isoDate(dz.endValue) : dates[dates.length - 1];
-    return [s, e];
+    try {
+      const ext = charts["chart-events"].getModel().getComponent("xAxis", 0).axis.scale.getExtent();
+      return [isoDate(ext[0]), isoDate(ext[1])];
+    } catch (e) {
+      const dz = charts["chart-events"].getOption().dataZoom[0];
+      return [dz.startValue != null ? isoDate(dz.startValue) : dates[0], dz.endValue != null ? isoDate(dz.endValue) : dates[dates.length - 1]];
+    }
   }
   function renderDailyTable() {
     const [s, e] = currentZoom();
@@ -408,6 +411,7 @@
       currentRangeDays = Number(b.dataset.days);
       const s = rangeStart(currentRangeDays), e = D.daily.dates[D.daily.dates.length - 1];
       charts["chart-events"].dispatchAction({ type: "dataZoom", startValue: s, endValue: e });
+      renderDailyTable();
     }));
     $("#snpp-only").addEventListener("change", renderTimeSeries);
     window.addEventListener("resize", debounce(() => Object.values(charts).forEach((c) => c.resize()), 150));
