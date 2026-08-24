@@ -118,7 +118,7 @@
       grid: { left: 48, right: 16, top: 36, bottom: 30, containLabel: false },
       xAxis: { type: "time", ...baseAxis(t), splitLine: { show: false }, min: dates[0], max: end, axisLabel: { color: t.muted, fontSize: 12, hideOverlap: true } },
       yAxis: { type: "value", ...baseAxis(t), axisLine: { show: false }, minInterval: 1, axisLabel: { color: t.muted, fontSize: 12, formatter: (v) => fmtInt(v) } },
-      tooltip: { trigger: "axis", axisPointer: { type: "line", lineStyle: { color: t.axis, width: 1 } }, ...tooltipStyle(t), formatter: title },
+      tooltip: { trigger: "axis", axisPointer: { type: "line", lineStyle: { color: t.axis, width: 1, type: "solid" } }, ...tooltipStyle(t), formatter: title },
       legend: { top: 0, left: 0, icon: "rect", itemWidth: 12, itemHeight: 12, textStyle: { color: t.ink2, fontSize: 12 } },
     });
 
@@ -249,7 +249,7 @@
       legend: { top: 0, left: 0, icon: "rect", itemWidth: 12, itemHeight: 3, textStyle: { color: t.ink2, fontSize: 12 }, data: [String(thisYear), ...(hl ? [String(hl)] : []), "Previous years"] },
       xAxis: { type: "value", min: 1, max: 366, ...baseAxis(t), splitLine: { show: false }, interval: 30.5, axisLabel: { color: t.muted, fontSize: 12, formatter: (v) => MONTHS[Math.min(11, Math.floor((v - 1) / 30.5))] || "" } },
       yAxis: { type: "value", ...baseAxis(t), axisLine: { show: false }, axisLabel: { color: t.muted, fontSize: 12, formatter: (v) => fmtInt(v) } },
-      tooltip: { trigger: "axis", axisPointer: { type: "line", lineStyle: { color: t.axis, width: 1 } }, ...tooltipStyle(t), formatter: (ps) => {
+      tooltip: { trigger: "axis", axisPointer: { type: "line", lineStyle: { color: t.axis, width: 1, type: "solid" } }, ...tooltipStyle(t), formatter: (ps) => {
         const doy = ps[0].value[0];
         const byYear = years.map((y) => [y, c.years[y][doy - 1]]).filter((r) => y_ok(r[0], doy, thisYear, doyToday)).sort((a, b) => b[1] - a[1]);
         return '<div style="margin-bottom:6px;color:var(--ink-2)">Day ' + doy + " (" + esc(doyLabel(doy)) + ") — events started so far</div>" +
