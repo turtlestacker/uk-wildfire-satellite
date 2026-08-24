@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UK Wildfire Activity from Satellite Detections</title>
+<meta name="description" content="Daily estimate of UK wildfire activity derived from NASA FIRMS VIIRS 375 m active-fire detections, 2012 to present.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%94%A5%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <p class="eyebrow">NASA FIRMS · VIIRS 375 m active-fire detections</p>
+    <h1>UK wildfire activity from satellite detections</h1>
+    <p class="lede">A daily estimate of wildfire activity across the United Kingdom, built from satellite hotspot detections
+      that are filtered to UK land, cleaned of persistent industrial heat sources, and clustered into fire events.
+      Updated automatically each morning. <a href="#method">How it is made</a> · <a href="#caveats">What it is not</a>.</p>
+    <p class="updated" id="updated"></p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="kpis" id="kpis" aria-label="Headline numbers"></section>
+
+  <section class="card">
+    <div class="card-head">
+      <div>
+        <h2>Estimated active fire events per day</h2>
+        <p class="sub">Distinct fire events with at least one qualifying detection that day, with a 7-day average.</p>
+      </div>
+      <div class="controls" role="group" aria-label="Date range">
+        <button class="range" data-days="30">30d</button>
+        <button class="range" data-days="90">90d</button>
+        <button class="range is-active" data-days="365">1y</button>
+        <button class="range" data-days="1826">5y</button>
+        <button class="range" data-days="0">All</button>
+      </div>
+    </div>
+    <div id="chart-events" class="chart chart-tall"></div>
+    <div class="card-head compact">
+      <div>
+        <h3>Satellite detections per day</h3>
+        <p class="sub">Qualifying VIIRS hotspots (all satellites). Same date range as above; several detections can belong to one fire.</p>
+      </div>
+      <label class="toggle"><input type="checkbox" id="snpp-only"> Suomi NPP only <span class="hint">(consistent single-satellite series since 2012)</span></label>
+    </div>
+    <div id="chart-detections" class="chart chart-short"></div>
+    <details class="table-view">
+      <summary>Table view — daily values in the selected range</summary>
+      <div class="table-scroll"><table id="table-daily"></table></div>
+      <p class="sub">Full dataset: <a href="data/daily.csv" download>daily.csv</a> · <a href="data/events.csv" download>events.csv</a></p>
+    </details>
+  </section>
+
+  <section class="card">
+    <div class="card-head">
+      <div>
+        <h2>Where fires were detected</h2>
+        <p class="sub">Fire events (circles sized by number of detections). Grey markers are persistent heat sources excluded from the counts.</p>
+      </div>
+      <div class="controls" role="group" aria-label="Map period">
+        <select id="map-period" aria-label="Map period"></select>
+        <label class="toggle"><input type="checkbox" id="map-detections"> Show individual detections</label>
+        <label class="toggle"><input type="checkbox" id="map-persistent" checked> Show excluded sources</label>
+      </div>
+    </div>
+    <div id="map" class="map" role="img" aria-label="Map of the UK showing detected fire events"></div>
+    <p class="sub" id="map-summary"></p>
+  </section>
+
+  <section class="grid-2">
+    <div class="card">
+      <div class="card-head">
+        <div>
+          <h2>This year against previous years</h2>
+          <p class="sub">Cumulative fire events started, by day of year.</p>
+        </div>
+        <div class="controls">
+          <label class="toggle" for="compare-year">Highlight <select id="compare-year" aria-label="Year to highlight"></select></label>
+        </div>
+      </div>
+      <div id="chart-cumulative" class="chart chart-mid"></div>
+    </div>
+    <div class="card">
+      <div class="card-head">
+        <div>
+          <h2>Fire events by month</h2>
+          <p class="sub">Events started in each month. Darker means more.</p>
+        </div>
+      </div>
+      <div id="chart-heatmap" class="chart chart-mid"></div>
+    </div>
+  </section>
+
+  <section class="grid-2">
+    <div class="card">
+      <div class="card-head">
+        <div>
+          <h2>Annual totals</h2>
+          <p class="sub">Fire events started per year. The current year is incomplete.</p>
+        </div>
+      </div>
+      <div id="chart-annual" class="chart chart-mid"></div>
+      <details class="table-view">
+        <summary>Table view — annual totals</summary>
+        <div class="table-scroll"><table id="table-annual"></table></div>
+      </details>
+    </div>
+    <div class="card">
+      <div class="card-head">
+        <div>
+          <h2>Largest fire events on record</h2>
+          <p class="sub">By number of satellite detections. Click a row to see it on the map.</p>
+        </div>
+      </div>
+      <div class="table-scroll"><table id="table-top"></table></div>
+    </div>
+  </section>
+
+  <section class="card prose" id="method">
+    <h2>How the estimate is made</h2>
+    <ol>
+      <li><strong>Source.</strong> NASA FIRMS VIIRS 375 m active-fire detections from Suomi NPP (since January 2012), NOAA-20 (since 2018) and NOAA-21 (since 2024). The reprocessed standard product is used where available and the near-real-time product for the most recent months.</li>
+      <li><strong>UK land only.</strong> Detections are kept if they fall on UK land (Natural Earth 10 m boundary, Great Britain and Northern Ireland, buffered by <span data-cfg="land_buffer_m"></span> m to keep coastal fires). Offshore pixels and the Isle of Man, Channel Islands and Ireland are excluded.</li>
+      <li><strong>Static sources removed.</strong> Pixels flagged by NASA as volcanic, other static land sources or offshore are dropped. In addition, 1 km grid cells detected in at least <span data-cfg="persistent_min_cal_months"></span> different calendar months (or <span data-cfg="persistent_min_year_months"></span> distinct year-months) are treated as persistent heat sources — refineries, steelworks, power stations, flares — and all detections within their exclusion radius are removed. <span id="n-persistent"></span></li>
+      <li><strong>Confidence.</strong> Only nominal- and high-confidence detections are kept; low-confidence pixels (often sun glint or weak anomalies) are discarded.</li>
+      <li><strong>Events, not detections.</strong> Remaining detections are clustered: two detections belong to the same fire event if they are within <span data-cfg="cluster_eps_m"></span> m of each other and observed within <span data-cfg="cluster_max_gap_days"></span> days of each other (transitively). This merges multiple pixels of one fire, repeat overpasses by different satellites, and consecutive-day observations, while tolerating a cloudy day.</li>
+      <li><strong>Daily measures.</strong> <em>Active fire events</em> is the number of distinct events with at least one detection on that UTC date; <em>new events</em> is the number of events whose first detection was that day; <em>detections</em> is the count of qualifying hotspots.</li>
+    </ol>
+    <h3>Filtering funnel</h3>
+    <div class="table-scroll"><table id="table-funnel"></table></div>
+    <h3>Sensitivity of the clustering assumptions</h3>
+    <p>Events started per year under different distance and day-gap thresholds. The default is highlighted.</p>
+    <div class="table-scroll"><table id="table-sensitivity"></table></div>
+  </section>
+
+  <section class="card prose" id="caveats">
+    <h2>What this is — and is not</h2>
+    <p>This is an <strong>estimate of UK wildfire activity derived from satellite active-fire detections</strong>. It is not an official count of wildfires and should not be described as one.</p>
+    <ul>
+      <li>VIIRS detects heat, not wildfires as such: agricultural and moorland management burns, bonfires, and industrial sources not caught by the filters will be included; small or short-lived fires, and fires under cloud, will be missed.</li>
+      <li>Each satellite passes over the UK roughly twice a day. Fires that start and end between overpasses are invisible; a fire seen on several days counts as one event but as several event-days.</li>
+      <li>Detection counts are not homogeneous over time: one satellite until 2018, two from 2018 and three from 2024. Event counts are more robust to this than raw detections; the Suomi NPP-only series is provided for a consistent view.</li>
+      <li>The most recent months use near-real-time data that is later replaced by the reprocessed standard product, so recent values can change slightly.</li>
+      <li>Clustering thresholds are judgement calls; the sensitivity table above shows how much the annual totals move when they change.</li>
+    </ul>
+    <p class="sub">Data: NASA FIRMS / LANCE, VIIRS I-Band 375 m Active Fire product (VNP14IMGT / VJ114IMGT / VJ214IMGT). Boundary: Natural Earth. Basemap: © OpenStreetMap contributors, © CARTO.</p>
+  </section>
+</main>
+
+<footer class="wrap site-footer">
+  <p>Built from NASA FIRMS data · Times are UTC · <a href="https://firms.modaps.eosdis.nasa.gov/" rel="noopener">firms.modaps.eosdis.nasa.gov</a></p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+pandas>=2.2
+numpy>=1.26
+shapely>=2.0
+pyproj>=3.6
+scikit-learn>=1.4
+requests>=2.31
+pyshp>=2.3
+python-dotenv>=1.0
+pytest>=8.0

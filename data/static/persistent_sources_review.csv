@@ -1,0 +1,41 @@
+lat,lon,n_cells,n,cal_months,year_months,years,night_share,static_type_share,radius_m,name
+51.56743,-3.77197,11,12500,12,75,7,0.81,0.99,2500,Port Talbot steelworks
+53.57125,-0.60135,11,9118,12,75,7,0.84,0.98,2500,Scunthorpe steelworks
+53.63473,-0.24489,4,2299,12,75,7,0.97,0.92,1500,Lindsey / Humber refineries
+54.62374,-1.12524,4,1578,12,44,4,0.8,0.98,1500,Wilton / Teesside industrial
+54.58846,-1.14798,4,1532,12,42,4,0.96,0.99,1500,Wilton / Teesside industrial
+53.45249,-1.32048,4,927,12,61,7,0.86,0.94,1500,unnamed persistent heat source
+50.83179,-1.36728,4,717,12,64,7,1.0,0.87,1500,Fawley refinery
+51.68388,-5.02891,2,688,12,67,7,0.99,0.92,1100,Milford Haven LNG / Dragon
+53.39818,-1.38761,3,679,12,74,7,0.89,0.94,1300,unnamed persistent heat source
+53.3384,-1.75293,1,588,12,67,7,1.0,0.95,1000,unnamed persistent heat source
+56.00743,-3.67636,6,587,12,65,7,0.78,0.65,1800,Grangemouth refinery/petrochemicals
+51.39723,-3.39428,2,507,12,65,6,1.0,0.96,1100,Aberthaw power station
+60.45967,-1.25744,2,465,12,61,7,0.95,0.63,1100,unnamed persistent heat source
+52.64078,-0.54736,1,421,12,66,7,1.0,0.98,1000,unnamed persistent heat source
+54.58167,-1.10743,5,338,12,41,7,0.95,0.46,1700,Wilton / Teesside industrial
+54.13145,-7.57885,2,304,12,55,7,1.0,0.89,1100,unnamed persistent heat source
+56.09879,-3.3056,2,249,9,26,7,0.79,0.04,1100,Mossmorran NGL plant
+53.8886,-2.38186,2,202,11,47,7,1.0,0.98,1100,unnamed persistent heat source
+51.48027,-3.1373,2,128,12,52,7,0.99,0.81,1100,unnamed persistent heat source
+53.15107,-3.0622,3,109,11,32,7,1.0,0.29,1300,unnamed persistent heat source
+50.9186,-1.39095,2,96,11,35,5,1.0,0.86,1100,unnamed persistent heat source
+53.73691,-0.23112,3,90,11,23,5,1.0,0.02,1300,Saltend chemicals park
+51.58983,-0.5966,1,78,12,22,6,1.0,0.0,1000,unnamed persistent heat source
+57.57966,-1.83549,2,66,12,21,7,0.83,0.03,1100,unnamed persistent heat source
+53.26403,-1.85578,1,58,9,33,7,1.0,0.05,1000,unnamed persistent heat source
+51.7394,-5.06292,2,56,10,18,3,1.0,0.82,1100,Milford Haven LNG / Dragon
+51.39126,-0.16795,1,50,10,26,5,1.0,0.0,1000,unnamed persistent heat source
+54.5956,-1.27326,2,48,11,16,7,0.98,0.0,1100,unnamed persistent heat source
+54.9536,-1.63344,1,45,12,30,7,0.96,0.0,1000,unnamed persistent heat source
+51.51415,0.10547,1,43,10,17,5,1.0,0.02,1000,unnamed persistent heat source
+53.2728,-2.8417,2,38,9,16,7,0.81,0.0,1100,Stanlow refinery
+53.27281,-1.19878,1,35,9,13,4,1.0,0.0,1000,unnamed persistent heat source
+51.54547,-0.4197,1,30,10,19,3,0.0,0.0,1000,unnamed persistent heat source
+51.9401,0.00328,1,30,10,15,6,0.47,0.0,1000,unnamed persistent heat source
+53.60422,-1.43489,1,29,10,18,4,0.9,0.0,1000,unnamed persistent heat source
+51.82572,-0.05387,1,22,8,12,3,1.0,0.0,1000,unnamed persistent heat source
+50.1537,-5.11273,1,14,8,10,5,0.21,0.0,1000,unnamed persistent heat source
+50.93095,-0.74407,1,14,8,11,4,1.0,0.0,1000,unnamed persistent heat source
+53.65197,-2.88531,1,12,8,8,3,1.0,0.0,1000,unnamed persistent heat source
+53.05928,-2.24455,1,8,8,8,5,0.38,0.0,1000,unnamed persistent heat source

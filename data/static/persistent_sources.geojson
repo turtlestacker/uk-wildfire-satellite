@@ -1,0 +1,805 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -3.77197,
+     51.56743
+    ]
+   },
+   "properties": {
+    "name": "Port Talbot steelworks",
+    "radius_m": 2500,
+    "n_detections": 12500,
+    "n_cells": 11,
+    "cal_months": 12,
+    "year_months": 75,
+    "years": 7,
+    "night_share": 0.81
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.60135,
+     53.57125
+    ]
+   },
+   "properties": {
+    "name": "Scunthorpe steelworks",
+    "radius_m": 2500,
+    "n_detections": 9118,
+    "n_cells": 11,
+    "cal_months": 12,
+    "year_months": 75,
+    "years": 7,
+    "night_share": 0.84
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.24489,
+     53.63473
+    ]
+   },
+   "properties": {
+    "name": "Lindsey / Humber refineries",
+    "radius_m": 1500,
+    "n_detections": 2299,
+    "n_cells": 4,
+    "cal_months": 12,
+    "year_months": 75,
+    "years": 7,
+    "night_share": 0.97
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.12524,
+     54.62374
+    ]
+   },
+   "properties": {
+    "name": "Wilton / Teesside industrial",
+    "radius_m": 1500,
+    "n_detections": 1578,
+    "n_cells": 4,
+    "cal_months": 12,
+    "year_months": 44,
+    "years": 4,
+    "night_share": 0.8
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.14798,
+     54.58846
+    ]
+   },
+   "properties": {
+    "name": "Wilton / Teesside industrial",
+    "radius_m": 1500,
+    "n_detections": 1532,
+    "n_cells": 4,
+    "cal_months": 12,
+    "year_months": 42,
+    "years": 4,
+    "night_share": 0.96
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.32048,
+     53.45249
+    ]
+   },
+   "properties": {
+    "name": "unnamed persistent heat source",
+    "radius_m": 1500,
+    "n_detections": 927,
+    "n_cells": 4,
+    "cal_months": 12,
+    "year_months": 61,
+    "years": 7,
+    "night_share": 0.86
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.36728,
+     50.83179
+    ]
+   },
+   "properties": {
+    "name": "Fawley refinery",
+    "radius_m": 1500,
+    "n_detections": 717,
+    "n_cells": 4,
+    "cal_months": 12,
+    "year_months": 64,
+    "years": 7,
+    "night_share": 1.0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -5.02891,
+     51.68388
+    ]
+   },
+   "properties": {
+    "name": "Milford Haven LNG / Dragon",
+    "radius_m": 1100,
+    "n_detections": 688,
+    "n_cells": 2,
+    "cal_months": 12,
+    "year_months": 67,
+    "years": 7,
+    "night_share": 0.99
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.38761,
+     53.39818
+    ]
+   },
+   "properties": {
+    "name": "unnamed persistent heat source",
+    "radius_m": 1300,
+    "n_detections": 679,
+    "n_cells": 3,
+    "cal_months": 12,
+    "year_months": 74,
+    "years": 7,
+    "night_share": 0.89
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.75293,
+     53.3384
+    ]
+   },
+   "properties": {
+    "name": "unnamed persistent heat source",
+    "radius_m": 1000,
+    "n_detections": 588,
+    "n_cells": 1,
+    "cal_months": 12,
+    "year_months": 67,
+    "years": 7,
+    "night_share": 1.0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -3.67636,
+     56.00743
+    ]
+   },
+   "properties": {
+    "name": "Grangemouth refinery/petrochemicals",
+    "radius_m": 1800,
+    "n_detections": 587,
+    "n_cells": 6,
+    "cal_months": 12,
+    "year_months": 65,
+    "years": 7,
+    "night_share": 0.78
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -3.39428,
+     51.39723
+    ]
+   },
+   "properties": {
+    "name": "Aberthaw power station",
+    "radius_m": 1100,
+    "n_detections": 507,
+    "n_cells": 2,
+    "cal_months": 12,
+    "year_months": 65,
+    "years": 6,
+    "night_share": 1.0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.25744,
+     60.45967
+    ]
+   },
+   "properties": {
+    "name": "unnamed persistent heat source",
+    "radius_m": 1100,
+    "n_detections": 465,
+    "n_cells": 2,
+    "cal_months": 12,
+    "year_months": 61,
+    "years": 7,
+    "night_share": 0.95
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.54736,
+     52.64078
+    ]
+   },
+   "properties": {
+    "name": "unnamed persistent heat source",
+    "radius_m": 1000,
+    "n_detections": 421,
+    "n_cells": 1,
+    "cal_months": 12,
+    "year_months": 66,
+    "years": 7,
+    "night_share": 1.0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.10743,
+     54.58167
+    ]
+   },
+   "properties": {
+    "name": "Wilton / Teesside industrial",
+    "radius_m": 1700,
+    "n_detections": 338,
+    "n_cells": 5,
+    "cal_months": 12,
+    "year_months": 41,
+    "years": 7,
+    "night_share": 0.95
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -7.57885,
+     54.13145
+    ]
+   },
+   "properties": {
+    "name": "unnamed persistent heat source",
+    "radius_m": 1100,
+    "n_detections": 304,
+    "n_cells": 2,
+    "cal_months": 12,
+    "year_months": 55,
+    "years": 7,
+    "night_share": 1.0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -3.3056,
+     56.09879
+    ]
+   },
+   "properties": {
+    "name": "Mossmorran NGL plant",
+    "radius_m": 1100,
+    "n_detections": 249,
+    "n_cells": 2,
+    "cal_months": 9,
+    "year_months": 26,
+    "years": 7,
+    "night_share": 0.79
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.38186,
+     53.8886
+    ]
+   },
+   "properties": {
+    "name": "unnamed persistent heat source",
+    "radius_m": 1100,
+    "n_detections": 202,
+    "n_cells": 2,
+    "cal_months": 11,
+    "year_months": 47,
+    "years": 7,
+    "night_share": 1.0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -3.1373,
+     51.48027
+    ]
+   },
+   "properties": {
+    "name": "unnamed persistent heat source",
+    "radius_m": 1100,
+    "n_detections": 128,
+    "n_cells": 2,
+    "cal_months": 12,
+    "year_months": 52,
+    "years": 7,
+    "night_share": 0.99
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -3.0622,
+     53.15107
+    ]
+   },
+   "properties": {
+    "name": "unnamed persistent heat source",
+    "radius_m": 1300,
+    "n_detections": 109,
+    "n_cells": 3,
+    "cal_months": 11,
+    "year_months": 32,
+    "years": 7,
+    "night_share": 1.0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.39095,
+     50.9186
+    ]
+   },
+   "properties": {
+    "name": "unnamed persistent heat source",
+    "radius_m": 1100,
+    "n_detections": 96,
+    "n_cells": 2,
+    "cal_months": 11,
+    "year_months": 35,
+    "years": 5,
+    "night_share": 1.0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.23112,
+     53.73691
+    ]
+   },
+   "properties": {
+    "name": "Saltend chemicals park",
+    "radius_m": 1300,
+    "n_detections": 90,
+    "n_cells": 3,
+    "cal_months": 11,
+    "year_months": 23,
+    "years": 5,
+    "night_share": 1.0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.5966,
+     51.58983
+    ]
+   },
+   "properties": {
+    "name": "unnamed persistent heat source",
+    "radius_m": 1000,
+    "n_detections": 78,
+    "n_cells": 1,
+    "cal_months": 12,
+    "year_months": 22,
+    "years": 6,
+    "night_share": 1.0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.83549,
+     57.57966
+    ]
+   },
+   "properties": {
+    "name": "unnamed persistent heat source",
+    "radius_m": 1100,
+    "n_detections": 66,
+    "n_cells": 2,
+    "cal_months": 12,
+    "year_months": 21,
+    "years": 7,
+    "night_share": 0.83
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.85578,
+     53.26403
+    ]
+   },
+   "properties": {
+    "name": "unnamed persistent heat source",
+    "radius_m": 1000,
+    "n_detections": 58,
+    "n_cells": 1,
+    "cal_months": 9,
+    "year_months": 33,
+    "years": 7,
+    "night_share": 1.0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -5.06292,
+     51.7394
+    ]
+   },
+   "properties": {
+    "name": "Milford Haven LNG / Dragon",
+    "radius_m": 1100,
+    "n_detections": 56,
+    "n_cells": 2,
+    "cal_months": 10,
+    "year_months": 18,
+    "years": 3,
+    "night_share": 1.0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.16795,
+     51.39126
+    ]
+   },
+   "properties": {
+    "name": "unnamed persistent heat source",
+    "radius_m": 1000,
+    "n_detections": 50,
+    "n_cells": 1,
+    "cal_months": 10,
+    "year_months": 26,
+    "years": 5,
+    "night_share": 1.0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.27326,
+     54.5956
+    ]
+   },
+   "properties": {
+    "name": "unnamed persistent heat source",
+    "radius_m": 1100,
+    "n_detections": 48,
+    "n_cells": 2,
+    "cal_months": 11,
+    "year_months": 16,
+    "years": 7,
+    "night_share": 0.98
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.63344,
+     54.9536
+    ]
+   },
+   "properties": {
+    "name": "unnamed persistent heat source",
+    "radius_m": 1000,
+    "n_detections": 45,
+    "n_cells": 1,
+    "cal_months": 12,
+    "year_months": 30,
+    "years": 7,
+    "night_share": 0.96
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.10547,
+     51.51415
+    ]
+   },
+   "properties": {
+    "name": "unnamed persistent heat source",
+    "radius_m": 1000,
+    "n_detections": 43,
+    "n_cells": 1,
+    "cal_months": 10,
+    "year_months": 17,
+    "years": 5,
+    "night_share": 1.0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.8417,
+     53.2728
+    ]
+   },
+   "properties": {
+    "name": "Stanlow refinery",
+    "radius_m": 1100,
+    "n_detections": 38,
+    "n_cells": 2,
+    "cal_months": 9,
+    "year_months": 16,
+    "years": 7,
+    "night_share": 0.81
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.19878,
+     53.27281
+    ]
+   },
+   "properties": {
+    "name": "unnamed persistent heat source",
+    "radius_m": 1000,
+    "n_detections": 35,
+    "n_cells": 1,
+    "cal_months": 9,
+    "year_months": 13,
+    "years": 4,
+    "night_share": 1.0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.4197,
+     51.54547
+    ]
+   },
+   "properties": {
+    "name": "unnamed persistent heat source",
+    "radius_m": 1000,
+    "n_detections": 30,
+    "n_cells": 1,
+    "cal_months": 10,
+    "year_months": 19,
+    "years": 3,
+    "night_share": 0.0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.00328,
+     51.9401
+    ]
+   },
+   "properties": {
+    "name": "unnamed persistent heat source",
+    "radius_m": 1000,
+    "n_detections": 30,
+    "n_cells": 1,
+    "cal_months": 10,
+    "year_months": 15,
+    "years": 6,
+    "night_share": 0.47
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.43489,
+     53.60422
+    ]
+   },
+   "properties": {
+    "name": "unnamed persistent heat source",
+    "radius_m": 1000,
+    "n_detections": 29,
+    "n_cells": 1,
+    "cal_months": 10,
+    "year_months": 18,
+    "years": 4,
+    "night_share": 0.9
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.05387,
+     51.82572
+    ]
+   },
+   "properties": {
+    "name": "unnamed persistent heat source",
+    "radius_m": 1000,
+    "n_detections": 22,
+    "n_cells": 1,
+    "cal_months": 8,
+    "year_months": 12,
+    "years": 3,
+    "night_share": 1.0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -5.11273,
+     50.1537
+    ]
+   },
+   "properties": {
+    "name": "unnamed persistent heat source",
+    "radius_m": 1000,
+    "n_detections": 14,
+    "n_cells": 1,
+    "cal_months": 8,
+    "year_months": 10,
+    "years": 5,
+    "night_share": 0.21
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.74407,
+     50.93095
+    ]
+   },
+   "properties": {
+    "name": "unnamed persistent heat source",
+    "radius_m": 1000,
+    "n_detections": 14,
+    "n_cells": 1,
+    "cal_months": 8,
+    "year_months": 11,
+    "years": 4,
+    "night_share": 1.0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.88531,
+     53.65197
+    ]
+   },
+   "properties": {
+    "name": "unnamed persistent heat source",
+    "radius_m": 1000,
+    "n_detections": 12,
+    "n_cells": 1,
+    "cal_months": 8,
+    "year_months": 8,
+    "years": 3,
+    "night_share": 1.0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.24455,
+     53.05928
+    ]
+   },
+   "properties": {
+    "name": "unnamed persistent heat source",
+    "radius_m": 1000,
+    "n_detections": 8,
+    "n_cells": 1,
+    "cal_months": 8,
+    "year_months": 8,
+    "years": 5,
+    "night_share": 0.38
+   }
+  }
+ ]
+}
