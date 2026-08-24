@@ -37,7 +37,12 @@ site/                static website (ECharts + Leaflet, no build step) and its J
    persistent heat sources (refineries, steelworks, power stations, flares). Adjacent cells merge
    into a site; detections within its exclusion radius (≥ 1 km, growing with footprint) are removed.
    `data/static/manual_exclusions.csv` adds known sites as a safety net. Recompute with
-   `python -m pipeline.run derive-sources` (it is deliberately not recomputed daily).
+   `python -m pipeline.run derive-sources` (it is deliberately not recomputed daily). Besides
+   industrial plants this also catches spots that are burned every year in the same season
+   (agricultural / managed burning): these are repeated stationary heat sources, not wildfires,
+   and are excluded too. `data/static/persistent_sources_review.csv` lists every flagged site
+   with its statistics for inspection; known moorland wildfire areas are checked to be unflagged
+   by `python -m pipeline.sanity`.
 4. **Confidence.** Keep `n` (nominal) and `h` (high); drop `l` (low).
 5. **Events.** Single-linkage clustering in space–time: two detections are in the same event if
    within **1,500 m** and within **2 days** of each other (transitively). Merges multiple pixels,
@@ -70,6 +75,20 @@ python -m http.server -d site 8000       # preview at http://localhost:8000
 `.github/workflows/update.yml` runs daily at 06:30 UTC: `update` → `build` → commit `data/` and
 `site/data/` → deploy `site/` to GitHub Pages. It needs the repository secret `FIRMS_MAP_KEY`
 and Pages set to "GitHub Actions" as the source.
+
+### Numbers at the first full build (2012-01-20 to 2026-08-24)
+
+| filter step | detections remaining |
+|---|---:|
+| in the UK bounding box | 240,600 |
+| on UK land | 182,947 |
+| not flagged static/offshore by NASA | 87,792 |
+| nominal or high confidence | 85,820 |
+| not near a persistent heat source | **66,045** |
+
+Those 66,045 detections cluster into **23,933 fire events**. Events started per year range from
+~930 (2014) to 3,180 (2025, the record); across the nine clustering settings in the sensitivity
+grid the annual totals move by about ±5%.
 
 ## Outputs
 

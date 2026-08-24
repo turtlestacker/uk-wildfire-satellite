@@ -1,41 +1,87 @@
 lat,lon,n_cells,n,cal_months,year_months,years,night_share,static_type_share,radius_m,name
-51.56743,-3.77197,11,12500,12,75,7,0.81,0.99,2500,Port Talbot steelworks
-53.57125,-0.60135,11,9118,12,75,7,0.84,0.98,2500,Scunthorpe steelworks
-53.63473,-0.24489,4,2299,12,75,7,0.97,0.92,1500,Lindsey / Humber refineries
+51.56752,-3.77234,11,37938,12,153,15,0.82,0.97,2500,Port Talbot steelworks
+53.571,-0.60198,12,30540,12,176,15,0.84,0.89,2600,Scunthorpe steelworks
+53.63483,-0.24529,6,10382,12,176,15,0.97,0.79,1800,Lindsey / Humber refineries
+50.83262,-1.36785,5,3520,12,162,15,0.98,0.67,1700,Fawley refinery
+51.68405,-5.0288,3,3497,12,165,15,0.99,0.74,1300,Milford Haven LNG / Dragon
+53.3983,-1.38778,4,3088,12,172,15,0.87,0.82,1500,unnamed persistent heat source
+53.33867,-1.75321,1,2832,12,169,15,0.99,0.82,1000,unnamed persistent heat source
+51.39745,-3.39454,2,2502,12,167,15,1.0,0.8,1100,Aberthaw power station
+56.0067,-3.6795,6,2486,12,141,15,0.79,0.57,1800,Grangemouth refinery/petrochemicals
+53.4522,-1.32081,5,1783,12,112,13,0.86,0.83,1700,unnamed persistent heat source
 54.62374,-1.12524,4,1578,12,44,4,0.8,0.98,1500,Wilton / Teesside industrial
-54.58846,-1.14798,4,1532,12,42,4,0.96,0.99,1500,Wilton / Teesside industrial
-53.45249,-1.32048,4,927,12,61,7,0.86,0.94,1500,unnamed persistent heat source
-50.83179,-1.36728,4,717,12,64,7,1.0,0.87,1500,Fawley refinery
-51.68388,-5.02891,2,688,12,67,7,0.99,0.92,1100,Milford Haven LNG / Dragon
-53.39818,-1.38761,3,679,12,74,7,0.89,0.94,1300,unnamed persistent heat source
-53.3384,-1.75293,1,588,12,67,7,1.0,0.95,1000,unnamed persistent heat source
-56.00743,-3.67636,6,587,12,65,7,0.78,0.65,1800,Grangemouth refinery/petrochemicals
-51.39723,-3.39428,2,507,12,65,6,1.0,0.96,1100,Aberthaw power station
-60.45967,-1.25744,2,465,12,61,7,0.95,0.63,1100,unnamed persistent heat source
-52.64078,-0.54736,1,421,12,66,7,1.0,0.98,1000,unnamed persistent heat source
-54.58167,-1.10743,5,338,12,41,7,0.95,0.46,1700,Wilton / Teesside industrial
-54.13145,-7.57885,2,304,12,55,7,1.0,0.89,1100,unnamed persistent heat source
-56.09879,-3.3056,2,249,9,26,7,0.79,0.04,1100,Mossmorran NGL plant
-53.8886,-2.38186,2,202,11,47,7,1.0,0.98,1100,unnamed persistent heat source
-51.48027,-3.1373,2,128,12,52,7,0.99,0.81,1100,unnamed persistent heat source
-53.15107,-3.0622,3,109,11,32,7,1.0,0.29,1300,unnamed persistent heat source
-50.9186,-1.39095,2,96,11,35,5,1.0,0.86,1100,unnamed persistent heat source
-53.73691,-0.23112,3,90,11,23,5,1.0,0.02,1300,Saltend chemicals park
-51.58983,-0.5966,1,78,12,22,6,1.0,0.0,1000,unnamed persistent heat source
-57.57966,-1.83549,2,66,12,21,7,0.83,0.03,1100,unnamed persistent heat source
-53.26403,-1.85578,1,58,9,33,7,1.0,0.05,1000,unnamed persistent heat source
+54.58846,-1.14797,4,1533,12,43,5,0.96,0.99,1500,Wilton / Teesside industrial
+56.09854,-3.30501,4,1366,12,73,15,0.78,0.2,1500,Mossmorran NGL plant
+54.13166,-7.57919,2,1355,12,147,15,1.0,0.81,1100,Ballyconnell cement (border)
+52.64109,-0.54757,2,1270,12,139,15,1.0,0.74,1100,Ketton cement works
+54.58229,-1.10751,6,865,12,65,14,0.91,0.49,1800,Wilton / Teesside industrial
+60.46058,-1.25697,3,780,12,101,15,0.95,0.4,1300,Sullom Voe oil terminal
+51.48044,-3.13705,2,765,12,151,15,0.97,0.78,1100,"Celsa steelworks, Cardiff"
+53.88877,-2.38177,2,699,12,112,15,1.0,0.64,1100,"Ribblesdale cement works, Clitheroe"
+53.15114,-3.06208,4,498,12,95,15,1.0,0.5,1500,Padeswood cement works
+53.73827,-0.23239,3,468,12,75,14,1.0,0.01,1300,Saltend chemicals park
+54.72513,-5.76859,2,386,12,19,4,0.99,0.07,1100,unnamed persistent heat source
+53.26378,-1.85549,2,371,12,97,15,1.0,0.29,1100,Hope cement works
+54.95327,-1.63292,2,304,12,95,14,0.95,0.37,1100,unnamed persistent heat source
+57.58113,-1.83609,4,274,12,58,15,0.8,0.02,1500,St Fergus gas terminal
+53.27295,-2.84108,2,194,12,49,15,0.73,0.0,1100,Stanlow refinery
+54.59563,-1.2731,2,192,12,36,11,0.98,0.0,1100,unnamed persistent heat source
+51.5071,0.44707,2,159,12,42,7,0.99,0.07,1100,unnamed persistent heat source
+51.35495,-0.47342,2,132,12,51,11,0.0,0.09,1100,unnamed persistent heat source
+54.61543,-1.19257,3,115,10,26,14,0.62,0.03,1300,Wilton / Teesside industrial
+54.10242,-3.18459,2,110,12,34,13,0.91,0.02,1100,unnamed persistent heat source
+51.35376,0.04838,1,98,10,35,8,0.54,0.04,1000,unnamed persistent heat source
+50.9186,-1.39095,2,96,11,35,5,1.0,0.86,1100,Marchwood energy-from-waste
+51.54478,-0.4197,2,84,12,33,6,0.0,0.0,1100,unnamed persistent heat source
+51.58984,-0.5966,1,79,12,23,7,1.0,0.0,1000,"Lakeside energy-from-waste, Slough"
+50.88113,-1.0777,2,75,6,20,12,0.01,0.0,1100,unnamed persistent heat source
+53.1037,-2.47243,1,74,6,43,15,0.0,0.0,1000,unnamed persistent heat source
+51.81806,-4.91908,2,61,4,17,10,0.0,0.0,1100,unnamed persistent heat source
+53.77326,-2.80961,2,58,3,17,10,0.0,0.0,1100,unnamed persistent heat source
+51.17475,-0.21283,2,57,7,16,7,0.9,0.0,1100,unnamed persistent heat source
+51.73097,-0.14281,1,56,9,17,5,0.93,0.0,1000,unnamed persistent heat source
 51.7394,-5.06292,2,56,10,18,3,1.0,0.82,1100,Milford Haven LNG / Dragon
-51.39126,-0.16795,1,50,10,26,5,1.0,0.0,1000,unnamed persistent heat source
-54.5956,-1.27326,2,48,11,16,7,0.98,0.0,1100,unnamed persistent heat source
-54.9536,-1.63344,1,45,12,30,7,0.96,0.0,1000,unnamed persistent heat source
-51.51415,0.10547,1,43,10,17,5,1.0,0.02,1000,unnamed persistent heat source
-53.2728,-2.8417,2,38,9,16,7,0.81,0.0,1100,Stanlow refinery
-53.27281,-1.19878,1,35,9,13,4,1.0,0.0,1000,unnamed persistent heat source
-51.54547,-0.4197,1,30,10,19,3,0.0,0.0,1000,unnamed persistent heat source
-51.9401,0.00328,1,30,10,15,6,0.47,0.0,1000,unnamed persistent heat source
+53.65257,-2.88564,1,55,12,30,11,1.0,0.0,1000,unnamed persistent heat source
+52.84367,-1.68216,1,53,4,22,8,0.0,0.0,1000,unnamed persistent heat source
+51.39126,-0.16795,1,50,10,26,5,1.0,0.0,1000,Beddington energy-from-waste
+52.73535,-2.70642,1,50,3,17,10,0.0,0.0,1000,unnamed persistent heat source
+53.27271,-1.19927,1,49,10,22,9,1.0,0.0,1000,unnamed persistent heat source
+50.93138,-0.74388,1,49,10,31,11,1.0,0.0,1000,unnamed persistent heat source
+52.26765,-0.42435,1,49,5,23,10,0.0,0.0,1000,unnamed persistent heat source
+52.72475,-2.43934,1,44,7,27,13,0.02,0.0,1000,unnamed persistent heat source
+51.93981,0.00306,1,43,10,20,8,0.35,0.0,1000,unnamed persistent heat source
+51.51415,0.10547,1,43,10,17,5,1.0,0.02,1000,"Riverside energy-from-waste, Belvedere"
+51.86546,0.82823,1,40,7,15,8,1.0,0.0,1000,unnamed persistent heat source
+50.83037,-1.19611,1,36,3,16,11,0.0,0.0,1000,unnamed persistent heat source
+52.52698,-2.40432,1,35,5,25,14,0.0,0.0,1000,unnamed persistent heat source
+52.10226,-0.07837,1,34,4,18,9,0.0,0.0,1000,unnamed persistent heat source
+51.60838,0.25796,1,33,11,22,7,0.09,0.0,1000,unnamed persistent heat source
+51.16726,0.80727,1,33,4,18,9,0.0,0.0,1000,unnamed persistent heat source
+51.8247,0.71859,1,32,3,16,9,0.0,0.0,1000,unnamed persistent heat source
+51.98147,-0.75771,1,32,9,16,6,1.0,0.0,1000,unnamed persistent heat source
+52.60662,1.31614,1,32,3,17,9,0.0,0.0,1000,unnamed persistent heat source
+56.03489,-3.69464,1,31,11,20,6,1.0,0.65,1000,Grangemouth refinery/petrochemicals
+52.33995,0.44364,1,30,8,9,2,0.47,0.0,1000,unnamed persistent heat source
+51.82641,1.09403,1,30,3,15,8,0.0,0.0,1000,unnamed persistent heat source
 53.60422,-1.43489,1,29,10,18,4,0.9,0.0,1000,unnamed persistent heat source
+57.69694,-4.15993,1,28,6,18,9,0.11,0.0,1000,unnamed persistent heat source
+50.86235,-0.79073,1,28,4,18,10,0.0,0.0,1000,unnamed persistent heat source
+50.86635,0.42449,1,27,3,15,8,0.0,0.0,1000,unnamed persistent heat source
+51.69217,0.28793,1,27,8,15,8,0.37,0.0,1000,unnamed persistent heat source
+54.84388,-5.78452,1,26,8,12,6,1.0,0.0,1000,Ballylumford / Kilroot
+51.72725,-1.91886,1,25,3,15,10,0.0,0.0,1000,unnamed persistent heat source
+50.15365,-5.11256,1,25,10,18,8,0.12,0.0,1000,unnamed persistent heat source
+53.4833,-2.43562,1,25,10,14,5,0.0,0.0,1000,unnamed persistent heat source
+51.35173,1.36881,1,25,3,17,12,0.0,0.0,1000,unnamed persistent heat source
+53.42161,-2.3965,1,24,6,16,11,0.96,0.0,1000,unnamed persistent heat source
 51.82572,-0.05387,1,22,8,12,3,1.0,0.0,1000,unnamed persistent heat source
-50.1537,-5.11273,1,14,8,10,5,0.21,0.0,1000,unnamed persistent heat source
-50.93095,-0.74407,1,14,8,11,4,1.0,0.0,1000,unnamed persistent heat source
-53.65197,-2.88531,1,12,8,8,3,1.0,0.0,1000,unnamed persistent heat source
-53.05928,-2.24455,1,8,8,8,5,0.38,0.0,1000,unnamed persistent heat source
+52.4854,-1.78358,1,22,5,16,10,0.0,0.0,1000,unnamed persistent heat source
+55.8044,-4.32511,1,20,5,15,10,0.0,0.0,1000,unnamed persistent heat source
+51.91838,-2.36932,1,20,4,16,9,0.0,0.0,1000,unnamed persistent heat source
+53.33424,-1.20364,1,18,8,11,3,1.0,0.0,1000,unnamed persistent heat source
+51.63051,0.21409,1,16,8,11,6,0.12,0.0,1000,unnamed persistent heat source
+51.66156,-0.35012,1,15,10,13,7,0.0,0.0,1000,unnamed persistent heat source
+53.05918,-2.24462,1,14,8,11,5,0.43,0.0,1000,unnamed persistent heat source
+51.26169,0.99724,1,14,9,10,5,0.86,0.0,1000,unnamed persistent heat source
+51.52563,-0.52309,1,11,8,8,5,0.27,0.0,1000,unnamed persistent heat source
+51.2333,1.20532,1,11,8,11,5,0.0,0.0,1000,unnamed persistent heat source
